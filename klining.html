@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    body {
+        background: rgb(238,174,202);
+        background: linear-gradient(307deg, rgba(238,174,202,1) 13%, rgba(148,187,233,1) 100%);
+    
+    .box {
+        background-color: white;
+        align-items: center;
+        width: 500px;
+        height: auto;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }.tab {
+        overflow: hidden;
+        border: 1px solid  rgb(238,174,202) linear-gradient(307deg, rgba(238,174,202,1) 13%, rgba(148,187,233,1) 100%);
+         border-radius: 20px;
+        background-color: #ffffff;
+    }
+    
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        border-radius: 20px;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color:  rgba(148,187,233,1);
+    }
+    
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: rgb(238,174,202);;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ffffff;
+        border-top: none;
+    }
+    .tabcontent {
+        animation: fadeEffect 2s; /* Fading effect takes 1 second */
+    }
+    
+    /* Go from zero to full opacity */
+    .rating polygon:hover {
+  cursor: pointer;
+  transition: 500ms;
+}
+.rating polygon:hover {
+  fill: black;
+}
+.rating polygon {
+  fill: lightgray;
+}
+.rating polygon.active{
+  fill: gold;
+}}
+    </style>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клининг сервис Астрахань</title>
+    <link rel="icon" href="C:\Users\kosta\Downloads\Изображение-WhatsApp-2024-09-20-в-14.12.02_77f731da.png" type="image/jpg">
+</head>
+<body>
+    <div class="box">
+        <div class="tab">
+
+            <button class="tablinks" onclick="openCity(event, 'London')">О нас</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Почему мы?</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Услуги</button>
+            <button class="tablinks" onclick="openCity(event, 'c')">Контактный номер</button>
+         
+          
+          
+          <!-- Tab content -->
+          <div id="London" class="tabcontent">
+            <h3>Компания 'Elite Cleaning'</h3>
+            <p>Компания 'Elite Cleaning' работает в Астрахани и Астраханской области уже более пяти лет, сотни клиентов и фирм довольны работой наших сотрудников и стабильно заказывают наш клининг.</p>
+          </div>
+          
+          <div id="Paris" class="tabcontent">
+            <h3>Elite Cleaning — </h3>
+            <p>Ваш надёжный помощник в борьбе за чистоту.</p> 
+            <p>5 лет успешной работы в Астраханской области.</p> 
+                <p>Наша команда профессионалов.</p>
+                    <p>Отзывы наших клиентов почти всегда положительные и клиенты всегда довольны нашей работой.</p>
+                        <p>Мы заботимся о вашем комфорте. </p>
+                            <p>Партнёрство и сотрудничество с такими компаниями как Пятерочка, всеИнструменты.ру, Магнит и многими другими.
+            </p>
+          </div>
+          
+          <div id="Tokyo" class="tabcontent">
+            <h3>В наши услуги входит</h3>
+            <p>1. Генеральная уборка - от 100 руб. м²</p>
+            <p>2. Повседневная уборка - от 50 руб. м²</p>
+            <p>3. Уборка офисов - от 50 руб. м²</p>
+            <p>4. Мойка окон - от 250 руб. створка</p>
+            <p>5. Мойка фасадов - от 200 руб. м²</p>
+            <p>6. Уборка после строительства и ремонта - от 120 руб. м²</p>
+            <p>7. Xимчистка диванов и мягкой мебели - от 1500 руб.</p>
+            <p>8. Избавление от неприятных  запахов помещения с помощью озона - от 2500 руб.</p>
+          </div>
+          <div id="c" class="tabcontent">
+            <h3>Связь с компанией:</h3>
+            <p>Номер телефона: +7 988 177-30-73</p>
+            <p>e-mail: komendantovaa89@mail.ru</p>
+            <p>Форма обращения: Комендантова Анастасия Александровна</p>
+           
+            </div>
+        <div>
+            <img src="C:\Users\kosta\OneDrive\Resimler\Saved Pictures\Изображение WhatsApp 2024-09-20 в 14.12.02_77f731da.jpg" alt="">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <span class="rating"></span>
+    <span class="rating" data-value="1"></span>
+    <div class="rating" data-value="3"></div>
+    <div class="rating" data-value="5"></div>
+</body>
+<script>
+    function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+class Rating {
+  constructor(dom) {
+    dom.innerHTML = '<svg width="110" height="20"></svg>';
+    this.svg = dom.querySelector('svg');
+    for(var i = 0; i < 5; i++)
+      this.svg.innerHTML += `<polygon data-value="${i+1}"
+           transform="translate(${i*22},0)" 
+           points="10,1 4,19.8 19,7.8 1,7.8 16,19.8">`;
+    this.svg.onclick = e => this.change(e);
+    this.render();
+  }
+  
+  change(e) {
+    let value = e.target.dataset.value;
+    value && (this.svg.parentNode.dataset.value = value); 
+    this.render();
+  }
+  
+  render() {
+    this.svg.querySelectorAll('polygon').forEach(star => {
+      let on = +this.svg.parentNode.dataset.value >= +star.dataset.value;
+      star.classList.toggle('active', on);
+    });
+  }
+}
+
+document.querySelectorAll('.rating').forEach(dom => new Rating(dom));
+</script>
+
+</html> 
+           
